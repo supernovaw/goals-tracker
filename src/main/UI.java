@@ -84,15 +84,16 @@ public class UI {
 	}
 
 	private void initButtons() {
+		int baseY = 650;
 		buttons = new ArrayList<>();
-		buttons.add(new Button("Add goal", 50, 350, 250, 30, this::onAddGoalClicked));
-		buttons.add(new Button("Add goal in the past", 310, 350, 280, 30, this::onAddGoalInPastClicked));
-		buttons.add(new Button("Complete goal", 50, 390, 250, 30, this::onCompleteGoalClicked));
-		buttons.add(new Button("Set completion point", 310, 390, 280, 30, this::onSetCompletionPointClicked));
-		buttons.add(new Button("Delete", 50, 430, 250, 30, this::onDeleteClicked));
-		buttons.add(new Button("Cancel completion", 310, 430, 280, 30, this::onCancelCompletionClicked));
-		buttons.add(new Button("Rename", 50, 470, 250, 30, this::onRenameClicked));
-		buttons.add(new Button("Change goal start", 310, 470, 280, 30, this::onChangeGoalStartClicked));
+		buttons.add(new Button("Add goal", 50, baseY, 250, 30, this::onAddGoalClicked));
+		buttons.add(new Button("Add goal in the past", 310, baseY, 280, 30, this::onAddGoalInPastClicked));
+		buttons.add(new Button("Complete goal", 50, baseY + 40, 250, 30, this::onCompleteGoalClicked));
+		buttons.add(new Button("Set completion point", 310, baseY + 40, 280, 30, this::onSetCompletionPointClicked));
+		buttons.add(new Button("Delete", 50, baseY + 80, 250, 30, this::onDeleteClicked));
+		buttons.add(new Button("Cancel completion", 310, baseY + 80, 280, 30, this::onCancelCompletionClicked));
+		buttons.add(new Button("Rename", 50, baseY + 120, 250, 30, this::onRenameClicked));
+		buttons.add(new Button("Change goal start", 310, baseY + 120, 280, 30, this::onChangeGoalStartClicked));
 	}
 
 	private void onAddGoalClicked() {
@@ -217,7 +218,7 @@ public class UI {
 	}
 
 	private Rectangle getAlignmentForTimeline() {
-		return new Rectangle(0, 0, width, 300);
+		return new Rectangle(0, 0, width, 600);
 	}
 
 	private void showPopup(String message) {
